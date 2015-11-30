@@ -17,5 +17,8 @@ public class ServerUrl {
 
 		return (protocol + Constants.serverIP  + imagemaster);
 	}
+	public String getImageprotocal() {
 
+		return (protocol + Constants.serverIP);
+	}
 }
