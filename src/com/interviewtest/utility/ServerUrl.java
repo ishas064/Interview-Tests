@@ -1,20 +1,21 @@
 package com.interviewtest.utility;
 
-public class ServerUrl {
-	static ServerUrl intance;
-	
-	public static ServerUrl getInstance()
-	{
-		if(intance!=null)
-		{
-			intance= new ServerUrl();
-		}
-		return intance;
-	}
-String imageURl="https://api.twitter.com/1/";
 
-public String getimageURl() {
-	// TODO Auto-generated method stub
-	return imageURl;
-}
+public class ServerUrl {
+	private static ServerUrl instance;
+	public String protocol = "http://";
+	private String imagemaster = "imageData.php";
+
+	public static ServerUrl getInstance() {
+		if (instance == null) {
+			instance = new ServerUrl();
+		}
+		return instance;
+	}
+
+	public String getImageMasterURL() {
+
+		return (protocol + Constants.serverIP  + imagemaster);
+	}
+
 }
